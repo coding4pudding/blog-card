@@ -1,5 +1,15 @@
 /* Put any custom CSS styles here.  */
 /* Be sure to delete the <style> tag in index.html if you want to use this stylesheet. */
+
+:root{
+  --var-indigo-700: #4338CA;
+  --var-neutral-900: #171717;
+  --var-neutral-600: #525252;
+  --var-green-700: #15803D;
+  --var-green-200: #BBF7D0;
+  --var-green-50: #F0FDF4;
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
@@ -10,10 +20,124 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  background: linear-gradient(to bottom, #F9FAFB 0%, #D2D6DB 100%);
 }
 
 * {
   box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  min-height: 768px;
+  justify-content: center;
+  padding: 120px 0px;
+}
+
+@media screen and (min-width: 1440px) {
+  .container{
+    min-height: 768px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container{
+    min-height: 1024px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .container{
+    min-height: 812px;
+  }
+}
+
+.blog-card{
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 
+    0px 1px 3px 0px rgba(0, 0, 0, 0.10),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.blog-card_image{
+  height: 288px;
+}
+
+.blog-card_content{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 16px;
+}
+
+
+.blog-card_content_header{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--var-neutral-900);
+}
+
+.blog-card_content_badge{
+  width: fit-content;
+  padding: 2px 8px;
+  align-items: center;
+  border-radius: 9999px;
+
+  border: 1px solid var(--var-green-200);
+  color: var(--var-green-700);
+  background: var(--var-green-50);
+
+
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.blog-card_content_text{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  line-height: 24px;
+  font-size: 16px;
+  color: var(--var-neutral-600);
+}
+
+.blog-card_content_btn{
+  border: none;
+  background: none;
+  width: 114px;
+  gap: 6px;
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 0px;
+  font-family: inherit;
+
+  color: var(--var-indigo-700);
+}
+
+.blog-card_content_btn_text{
+  display: flex;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.blog-card_content_btn_right_arrow{
+  display: flex;
 }
 
 .credits {
